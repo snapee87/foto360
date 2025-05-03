@@ -21,10 +21,10 @@
 <body>
   <div id="viewer"></div>
 
-  <!-- Caricamento dei moduli ES -->
+  <!-- Caricamento di Three.js come modulo -->
   <script type="module">
     import * as THREE from 'https://unpkg.com/three@0.150.1/build/three.module.js';
-    import PhotoSphereViewer from 'https://unpkg.com/photo-sphere-viewer@5/dist/photo-sphere-viewer.js';
+    import PhotoSphereViewer from 'https://unpkg.com/photo-sphere-viewer@5/dist/photo-sphere-viewer.module.js'; // Usa la versione del modulo
     import { GyroscopePlugin } from 'https://unpkg.com/photo-sphere-viewer@5/dist/plugins/gyroscope.js';
 
     const viewer = new PhotoSphereViewer.Viewer({
