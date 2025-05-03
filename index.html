@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foto 360° con Giroscopio</title>
+  <link rel="stylesheet" href="https://unpkg.com/photo-sphere-viewer@5/dist/photo-sphere-viewer.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+    }
+    #viewer {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewer"></div>
+
+  <script src="https://unpkg.com/uevent@2/browser.min.js"></script>
+  <script src="https://unpkg.com/three@0.150.1/build/three.min.js"></script>
+  <script src="https://unpkg.com/photo-sphere-viewer@5/dist/photo-sphere-viewer.js"></script>
+  <script src="https://unpkg.com/photo-sphere-viewer@5/dist/plugins/gyroscope.js"></script>
+
+  <script>
+    const viewer = new PhotoSphereViewer.Viewer({
+      container: document.querySelector('#viewer'),
+      panorama: 'https://photo-sphere-viewer-data.netlify.app/assets/sphere.jpg', // tua immagine qui
+      plugins: [
+        [PhotoSphereViewer.GyroscopePlugin, { touchmove: true }]
+      ],
+    });
+
+    viewer.once('ready', () => {
+      console.log('Viewer pronto!');
+    });
+  </script>
+</body>
+</html>
