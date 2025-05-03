@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Foto 360° con Giroscopio</title>
-  <link rel="stylesheet" href="https://unpkg.com/photo-sphere-viewer@5/dist/photo-sphere-viewer.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@5.0.0/dist/photo-sphere-viewer.min.css" />
   <style>
     html, body {
       margin: 0;
@@ -23,9 +23,9 @@
 
   <!-- Caricamento di Three.js come modulo -->
   <script type="module">
-    import * as THREE from 'https://unpkg.com/three@0.150.1/build/three.module.js';
-    import PhotoSphereViewer from 'https://unpkg.com/photo-sphere-viewer@5/dist/photo-sphere-viewer.module.js'; // Usa la versione del modulo
-    import { GyroscopePlugin } from 'https://unpkg.com/photo-sphere-viewer@5/dist/plugins/gyroscope.js';
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.module.js';
+    import PhotoSphereViewer from 'https://cdn.jsdelivr.net/npm/photo-sphere-viewer@5.0.0/dist/photo-sphere-viewer.min.js';
+    import { GyroscopePlugin } from 'https://cdn.jsdelivr.net/npm/photo-sphere-viewer@5.0.0/dist/plugins/gyroscope.min.js';
 
     const viewer = new PhotoSphereViewer.Viewer({
       container: document.querySelector('#viewer'),
@@ -41,3 +41,4 @@
   </script>
 </body>
 </html>
+
